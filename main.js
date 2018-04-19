@@ -22,16 +22,7 @@ function createStar(count = 10) {
 
     let sideInterval = setInterval(() => {
       side++;
-
-      if(side % 2 === 0) {
-        posX = posX - 100;
-        star.style.left = `${posX}px`;
-      }
-      else {
-        posX = posX + 100;
-        star.style.left = `${posX}px`;
-      }
-    }, 1000);
+    }, 500);
 
     let interval = setInterval(() => {
       // let count = 0;
@@ -40,6 +31,15 @@ function createStar(count = 10) {
       if(posY > 0) {
         posY--;
         star.style.top = `${posY}px`;
+
+        if(side % 2 === 0) {
+          posX--;
+          star.style.left = `${posX}px`;
+        }
+        else {
+          posX++;
+          star.style.left = `${posX}px`;
+        }
       }
       else {
         clearInterval(interval);

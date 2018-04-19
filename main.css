@@ -1,0 +1,6 @@
+.star {
+  position: fixed;
+  border-radius: 50%;
+  background: #000;
+  /* transition: 1s ease-in-out; */
+}
